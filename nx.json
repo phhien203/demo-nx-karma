@@ -20,5 +20,20 @@
         ]
       }
     }
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "linter": "eslint",
+      "unitTestRunner": "karma"
+    },
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "karma"
+    },
+    "@nrwl/angular:component": {}
+  },
+  "defaultProject": "sight-fe",
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
   }
 }

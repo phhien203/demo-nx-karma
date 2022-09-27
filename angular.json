@@ -3,6 +3,48 @@
   "version": 1,
   "newProjectRoot": ".",
   "projects": {
+    "shared-environments": {
+      "projectType": "library",
+      "root": "libs/shared/environments",
+      "sourceRoot": "libs/shared/environments/src",
+      "prefix": "sight-fe",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/shared/environments"],
+          "options": {
+            "project": "libs/shared/environments/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/environments/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/environments/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/shared/environments/src/test.ts",
+            "tsConfig": "libs/shared/environments/tsconfig.spec.json",
+            "karmaConfig": "libs/shared/environments/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/environments/src/**/*.ts",
+              "libs/shared/environments/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["scope:shared", "type:environments"]
+    },
     "sight-fe": {
       "projectType": "application",
       "schematics": {
@@ -46,8 +88,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "libs/shared/environments/src/lib/environments/environment.ts",
+                  "with": "libs/shared/environments/src/lib/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -87,7 +129,7 @@
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "karmaConfig": "src/karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
@@ -96,6 +138,5 @@
         }
       }
     }
-  },
-  "defaultProject": "sight-fe"
+  }
 }
