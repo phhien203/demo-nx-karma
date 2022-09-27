@@ -2,14 +2,14 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 const { join } = require("path");
-const getBaseKarmaConfig = require("../../../karma.conf");
+const getBaseKarmaConfig = require("../../../karma.conf.base");
 
 module.exports = function (config) {
   const baseConfig = getBaseKarmaConfig();
   config.set({
     ...baseConfig,
-    coverageIstanbulReporter: {
-      ...baseConfig.coverageIstanbulReporter,
+    coverageReporter: {
+      ...baseConfig.coverageReporter,
       dir: join(__dirname, "../../../coverage/libs/shared/environments"),
     },
   });
