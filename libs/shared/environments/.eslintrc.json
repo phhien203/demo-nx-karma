@@ -27,7 +27,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "sight-fe",
+            "prefix": "product-fe",
             "style": "kebab-case"
           }
         ]

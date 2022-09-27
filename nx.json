@@ -1,5 +1,5 @@
 {
-  "npmScope": "sight-fe",
+  "npmScope": "product-fe",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -32,7 +32,7 @@
     },
     "@nrwl/angular:component": {}
   },
-  "defaultProject": "sight-fe",
+  "defaultProject": "product-fe",
   "cli": {
     "defaultCollection": "@nrwl/angular"
   }

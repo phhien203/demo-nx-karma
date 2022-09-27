@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "libs/shared/environments",
       "sourceRoot": "libs/shared/environments/src",
-      "prefix": "sight-fe",
+      "prefix": "product-fe",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:ng-packagr-lite",
@@ -45,7 +45,7 @@
       },
       "tags": ["scope:shared", "type:environments"]
     },
-    "sight-fe": {
+    "product-fe": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -62,7 +62,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sight-fe",
+            "outputPath": "dist/product-fe",
             "index": "apps/web/src/index.html",
             "main": "apps/web/src/main.ts",
             "polyfills": "apps/web/src/polyfills.ts",
@@ -109,10 +109,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sight-fe:build:production"
+              "browserTarget": "product-fe:build:production"
             },
             "development": {
-              "browserTarget": "sight-fe:build:development"
+              "browserTarget": "product-fe:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -120,7 +120,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sight-fe:build"
+            "browserTarget": "product-fe:build"
           }
         },
         "test": {

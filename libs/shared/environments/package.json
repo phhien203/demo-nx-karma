@@ -1,5 +1,5 @@
 {
-  "name": "@sight-fe/shared/environments",
+  "name": "@product-fe/shared/environments",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^12.2.0",

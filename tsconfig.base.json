@@ -20,7 +20,7 @@
       "dom"
     ],
     "paths": {
-      "@sight-fe/shared/environments": [
+      "@product-fe/shared/environments": [
         "libs/shared/environments/src/index.ts"
       ]
     }

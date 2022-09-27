@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { environment } from '@sight-fe/shared/environments';
+import { environment } from '@product-fe/shared/environments';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,6 @@ import { environment } from '@sight-fe/shared/environments';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'sight-fe';
+  title = 'product-fe';
   isProd = environment.production;
 }
